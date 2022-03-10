@@ -14,11 +14,11 @@ class Alpha_Funding(object):
         # self.home_path = ''
 
         self.init = xgb.Booster({'nthread': 4})  # init model
-        self.model_dolar = self.init.load_model(self.home_path + 'src\\xgb_dolar.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_bova11 = self.init.load_model(self.home_path + 'src\\xgb_bova11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_smal11 = self.init.load_model(self.home_path + 'src\\xgb_smal11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_bitcoin = self.init.load_model(self.home_path + 'src\\xgb_bitcoin.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_ether = self.init.load_model(self.home_path + 'src\\xgb_ether.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        self.model_dolar = self.init.load_model(self.home_path + 'src/xgb_dolar.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        self.model_bova11 = self.init.load_model(self.home_path + 'src/xgb_bova11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        self.model_smal11 = self.init.load_model(self.home_path + 'src/xgb_smal11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        self.model_bitcoin = self.init.load_model(self.home_path + 'src/xgb_bitcoin.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        self.model_ether = self.init.load_model(self.home_path + 'src/xgb_ether.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
 
 
         # self.model_dolar = pickle.load(open(self.home_path + '\\src\\xgb_dolar.pkl', 'rb'))
@@ -28,21 +28,21 @@ class Alpha_Funding(object):
         # self.model_ether = pickle.load(open(self.home_path + '\\src\\xgb_ether.pkl', 'rb'))
 
     def load_data(self):
-    	selic = pd.read_csv('data\\selic.csv')
+    	selic = pd.read_csv('data/selic.csv')
     	selic.drop('Unnamed: 0', axis=1, inplace=True)
-    	indice_di = pd.read_csv('data\\indice_di.csv')
+    	indice_di = pd.read_csv('data/indice_di.csv')
     	indice_di.drop('Unnamed: 0', axis=1, inplace=True)
-    	ipca = pd.read_csv('data\\ipca.csv')
+    	ipca = pd.read_csv('data/ipca.csv')
     	ipca.drop('Unnamed: 0', axis=1, inplace=True)
-    	dolar = pd.read_csv('data\\dolar.csv')
+    	dolar = pd.read_csv('data/dolar.csv')
     	dolar.drop('Unnamed: 0', axis=1, inplace=True)
-    	bova11 = pd.read_csv('data\\bova11.csv')
+    	bova11 = pd.read_csv('data/bova11.csv')
     	bova11.drop('Unnamed: 0', axis=1, inplace=True)
-    	smal11 = pd.read_csv('data\\smal11.csv')
+    	smal11 = pd.read_csv('data/smal11.csv')
     	smal11.drop('Unnamed: 0', axis=1, inplace=True)
-    	bitcoin = pd.read_csv('data\\bitcoin.csv')
+    	bitcoin = pd.read_csv('data/bitcoin.csv')
     	bitcoin.drop('Unnamed: 0', axis=1, inplace=True)
-    	ether = pd.read_csv('data\\ether.csv')
+    	ether = pd.read_csv('data/ether.csv')
     	ether.drop('Unnamed: 0', axis=1, inplace=True)
 
     	# Add stock label
@@ -406,28 +406,28 @@ class Alpha_Funding(object):
     def predict(self, data):
         if 'DOLAR' in data['symbol'][0]:
         #     param_tuned = {'n_estimators': 1000, 'eta': 0.01, 'max_depth': 5, 'subsample': 0.7, 'colsample_bytree': 0.3, 'min_child_weight': 15}
-            self.model_dolar = pickle.load(open(self.home_path + '\\src\\xgb_dolar.pkl', 'rb'))
+            #self.model_dolar = pickle.load(open(self.home_path + '\\src\\xgb_dolar.pkl', 'rb'))
             xgb_model = self.model_dolar  
 
         if 'BOVA11' in data['symbol'][0]:
         #     param_tuned = {'n_estimators': 1700, 'eta': 0.01, 'max_depth': 3, 'subsample': 0.1, 'colsample_bytree': 0.3, 'min_child_weight': 8}
-            self.model_bova11 = pickle.load(open(self.home_path + '\\src\\xgb_bova11.pkl', 'rb'))
+            #self.model_bova11 = pickle.load(open(self.home_path + '\\src\\xgb_bova11.pkl', 'rb'))
             xgb_model = self.model_bova11 
 
         if 'SMAL11' in data['symbol'][0]:
         #     param_tuned = {'n_estimators': 1000, 'eta': 0.01, 'max_depth': 9, 'subsample': 0.5, 'colsample_bytree': 0.3, 'min_child_weight': 15}
-            self.model_smal11 = pickle.load(open(self.home_path + '\\src\\xgb_smal11.pkl', 'rb'))
+            #self.model_smal11 = pickle.load(open(self.home_path + '\\src\\xgb_smal11.pkl', 'rb'))
             xgb_model = self.model_smal11
 
 
         if 'BITCOIN' in data['symbol'][0]:
         #     param_tuned = {'n_estimators': 200, 'eta': 0.03, 'max_depth': 9, 'subsample': 0.1, 'colsample_bytree': 0.7, 'min_child_weight': 8}
-            self.model_bitcoin = pickle.load(open(self.home_path + '\\src\\xgb_bitcoin.pkl', 'rb'))
+            #self.model_bitcoin = pickle.load(open(self.home_path + '\\src\\xgb_bitcoin.pkl', 'rb'))
             xgb_model = self.model_bitcoin
 
         if 'ETHER' in data['symbol'][0]:
         #     param_tuned = {'n_estimators': 1000, 'eta': 0.03, 'max_depth': 5, 'subsample': 0.5, 'colsample_bytree': 0.7, 'min_child_weight': 15}
-            self.model_ether = pickle.load(open(self.home_path + '\\src\\xgb_ether.pkl', 'rb'))
+            #self.model_ether = pickle.load(open(self.home_path + '\\src\\xgb_ether.pkl', 'rb'))
             xgb_model = self.model_ether 
 
         
