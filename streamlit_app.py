@@ -8,7 +8,7 @@ from alpha_funding import Alpha_Funding
 def main():
 
 	st.title('Alpha Funding - Portfolio Proposal')
-	st.image('img\stock_market.jpg')
+	st.image('img/stock_market.jpg')
 	st.markdown('''This app aims to provide a portolio recommendation to investiment alocation. The app has machine learning models capable
 		to predict the daily return percentage for the next two years from 5 different assets: Dolar, Bova11, Smal11, Bitcoin and Ether.''')
 	st.markdown('''
