@@ -13,7 +13,7 @@ class Alpha_Funding(object):
         self.home_path = ''
         # self.home_path = ''
 
-        self.init = xgb.Booster({'nthread': 4})  # init model
+        self.init = xgb.Booster()  # init model {'nthread': 4}
         self.model_dolar = self.init.load_model(self.home_path + 'src/xgb_dolar.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
         self.model_bova11 = self.init.load_model(self.home_path + 'src/xgb_bova11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
         self.model_smal11 = self.init.load_model(self.home_path + 'src/xgb_smal11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
@@ -418,7 +418,7 @@ class Alpha_Funding(object):
         #     param_tuned = {'n_estimators': 1000, 'eta': 0.01, 'max_depth': 9, 'subsample': 0.5, 'colsample_bytree': 0.3, 'min_child_weight': 15}
             #self.model_smal11 = pickle.load(open(self.home_path + '\\src\\xgb_smal11.pkl', 'rb'))
             xgb_model = self.model_smal11
-            
+
 
         if 'BITCOIN' in data['symbol'][0]:
         #     param_tuned = {'n_estimators': 200, 'eta': 0.03, 'max_depth': 9, 'subsample': 0.1, 'colsample_bytree': 0.7, 'min_child_weight': 8}
