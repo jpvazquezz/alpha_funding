@@ -15,10 +15,10 @@ class Alpha_Funding(object):
 
         self.init = xgb.Booster()  # init model {'nthread': 4}
         self.model_dolar = self.init.load_model(self.home_path + 'src/xgb_dolar.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_bova11 = self.init.load_model(self.home_path + 'src/xgb_bova11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_smal11 = self.init.load_model(self.home_path + 'src/xgb_smal11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_bitcoin = self.init.load_model(self.home_path + 'src/xgb_bitcoin.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
-        self.model_ether = self.init.load_model(self.home_path + 'src/xgb_ether.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        # self.model_bova11 = self.init.load_model(self.home_path + 'src/xgb_bova11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        # self.model_smal11 = self.init.load_model(self.home_path + 'src/xgb_smal11.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        # self.model_bitcoin = self.init.load_model(self.home_path + 'src/xgb_bitcoin.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
+        # self.model_ether = self.init.load_model(self.home_path + 'src/xgb_ether.model') #pickle.load(open(self.home_path + '\\src\\model_xgb.pkl', 'rb'))
 
 
         # self.model_dolar = pickle.load(open(self.home_path + '\\src\\xgb_dolar.pkl', 'rb'))
