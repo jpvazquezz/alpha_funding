@@ -18,7 +18,6 @@ To achieve that, I was responsible to elaborate hypothesis and validate them thr
 * The daily return percentage in weekends is zero
 * Each asset has a different machine learning model (5 in total)
 * Monte Carlo Simulation and Efficient Frontier were used to define the best investiment portfolio
-* 
 
 ## 3. Solution Strategy
 The solution was based upon the following strategy:
@@ -44,6 +43,7 @@ R: **True**, the cryto investor has more than 14.5x the national investor's (Bov
 R: **False**, the return earned by the crypto investor (0.84) is significantly higher than that of the foreign investor (0.25).
 
 **Hypothesis 3**: 6. Investing 20% in each asset gives a greater return than just investing in national assets 
+
 R: **True**, the balanced investment in the asset portfolio yields a return (0.374) considerably higher than the exclusively national portfolio (0.058)
 
 ## 5. Machine Leaning Model Application:
@@ -53,23 +53,21 @@ The following classification algorithms were tested:
 - XGBoost Regressor
 - Random Forest Regressor
 
-MAE was elected the main metric of performance evaluation as RSME is used as accessory metric. 
-
-|          |  Logistic Regression  |       SVC        |     XGBoost     |   Random Forest  | 
-|----------|-----------------------|------------------|-----------------|------------------|
-| F1-Score |    0\.713+/-0\.014    | 0\.803+/-0\.016  | 0\.901+/-0\.008 |   0\.887+/-0\.01 |
+MAE was elected the main metric of performance evaluation as RSME is used as accessory metric.The models were trained after running a time-series cross validation with 10 splits in the full dataset.
 
 ## 6. Machine Learning Performance
 
-The **XGBoost** was the chosen algorithm to be applied. In addition, I made a calibration using CalibratedClassifierCV.	
-The table shows the F1-Score metric after running a cross validation score with 10 splits in the full dataset.
-Model's final performance:
+The **XGBoost** was the chosen algorithm to be applied. Models' final performance:
 
-| Chosen Model | F1-Score |
-|--------------|----------|
-|    XGBoost   |  0\.905  |
+| Chosen Model |  Dolar  |   BOVA11  |  SMAL11  |  Bitcoin  |  Ether  |
+|--------------|---------|-----------|----------|-----------|---------|
+|   XGBoost    | 0.00034 |  0.00091  | 0.00134  |  0.00047  | 0.00165 |
 
 ## 7. Business Results
+
+| `returns` |  `volatility`  | `return_risk_ratio` |  `dolar_weight`  |	`bova11_weight`	| `smal11_weight` | `bitcoin_weight` | `ether_weight` |
+|-----------|----------------|---------------------|------------------|-----------------|-----------------|------------------|----------------|
+|  0.35891  |	  0.17783    |       2.01829	   |     0.52842      |	    0.00826	|     0.27851	  |      0.00007     |	   0.18473    |
 
 
 ## 8. Conclusions
@@ -79,6 +77,8 @@ Model's final performance:
 
 
 ## 10. To Improve
+* Gather more data and features to reduce overfitting
+* Im
 
 ## About the author
 
