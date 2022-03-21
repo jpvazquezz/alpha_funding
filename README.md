@@ -5,7 +5,7 @@ Source: [Unplash](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?i
 
 ## 1. Business Problem
 
-Th Alpha Funding company deals with financial asset management from people and companies. The companies has 45 specialisied employees who aim to help outhers strieve their financial independence.
+Th Alpha Funding company deals with financial asset management from people and companies. The Alpha Funding has 45 specialisied employees who aim to help others strieve their financial independence.
 
 Initially, Alpha Funding recommends to investiment mainly on 5 assets: Dollar, Bova11, Smal11, Bitcoin and Ether. Morover, some economic indicators are monitored: Selic, IPCA and Indice DI.
 
