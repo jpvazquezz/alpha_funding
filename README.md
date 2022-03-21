@@ -44,19 +44,19 @@ The solution was based upon the following strategy:
 
 ## 4. Top 3 Data Insights:
 	
-**Hypothesis 1**: The cryto investor (Bitcoin and Ether only) has more than twice the national investor's (Bova11 and Smal11) return.
+**Hypothesis 1**: The crypto investor (Bitcoin and Ether only) has more than twice the national investor's (Bova11 and Smal11) return.
 
 R: **True**, the cryto investor has more than 14.5x the national investor's (Bova11 and Smal11) return.
 
 **Hypothesis 2**: The average return of the foreign investor (Dollar, Ether e Bova11) is higher than the average return of the crypto investor
 R: **False**, the return earned by the crypto investor (0.84) is significantly higher than that of the foreign investor (0.25).
 
-**Hypothesis 3**: 6. Investing 20% in each asset gives a greater return than just investing in national assets 
+**Hypothesis 3**: Investing 20% in each asset gives a greater return than just investing in national assets 
 
 R: **True**, the balanced investment in the asset portfolio yields a return (0.374) considerably higher than the exclusively national portfolio (0.058)
 
 ## 5. Machine Leaning Model Application:
-The following classification algorithms were tested:
+The following algorithms were tested:
 
 - Linear Regression
 - XGBoost Regressor
