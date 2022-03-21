@@ -7,7 +7,7 @@ Source: [Unplash](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?i
 
 Th Alpha Funding company deals with financial asset management from people and companies. The companies has 45 specialisied employees who aim to help outhers strieve their financial independence.
 
-Initially, Alpha Funding recommends to investiment mainly on 5 assets: Dolar, Bova11, Smal11, Bitcoin and Ether. Morover, some economic indicators are monitored: Selic, IPCA and Indice DI.
+Initially, Alpha Funding recommends to investiment mainly on 5 assets: Dollar, Bova11, Smal11, Bitcoin and Ether. Morover, some economic indicators are monitored: Selic, IPCA and Indice DI.
 
 I was hired to realize a exploratory data analysis and to propose a action plan to help Alpha Funding improve their process of offering investiments to their clients.
 To achieve that, I was responsible to elaborate hypothesis and validate them through statistical models and to create a machine learning model capable to predict the assets' rentability and, finally, propose a ideal investiment portfolio based on the model's prediction.
@@ -39,7 +39,7 @@ The solution was based upon the following strategy:
 
 R: **True**, the cryto investor has more than 14.5x the national investor's (Bova11 and Smal11) return.
 
-**Hypothesis 2**: The average return of the foreign investor (Dolar, Ether e Bova11) is higher than the average return of the crypto investor
+**Hypothesis 2**: The average return of the foreign investor (Dollar, Ether e Bova11) is higher than the average return of the crypto investor
 R: **False**, the return earned by the crypto investor (0.84) is significantly higher than that of the foreign investor (0.25).
 
 **Hypothesis 3**: 6. Investing 20% in each asset gives a greater return than just investing in national assets 
@@ -59,26 +59,38 @@ MAE was elected the main metric of performance evaluation as RSME is used as acc
 
 The **XGBoost** was the chosen algorithm to be applied. Models' final performance:
 
-| Chosen Model |  Dolar  |   BOVA11  |  SMAL11  |  Bitcoin  |  Ether  |
+| Chosen Model |  Dollar  |   BOVA11  |  SMAL11  |  Bitcoin  |  Ether  |
 |--------------|---------|-----------|----------|-----------|---------|
 |   XGBoost    | 0.00034 |  0.00091  | 0.00134  |  0.00047  | 0.00165 |
 
 ## 7. Business Results
 
+According to our Monte Carlo Simulation, where we created 100 thousand portfolios with random allocation, the **best portfolio**, the one with the **highest return_risk_ratio**, has Dollar as the asset with the highest allocation, followed by Smal11 and Ether, respectively.
+
 | `returns` |  `volatility`  | `return_risk_ratio` |  `dolar_weight`  |	`bova11_weight`	| `smal11_weight` | `bitcoin_weight` | `ether_weight` |
 |-----------|----------------|---------------------|------------------|-----------------|-----------------|------------------|----------------|
 |  0.35891  |	  0.17783    |       2.01829	   |     0.52842      |	    0.00826	|     0.27851	  |      0.00007     |	   0.18473    |
 
+While no match for Bitcoin and Eheter, our optimized portfolio was therefore better than Dolar, Bovar11 and Smal11 individually. This diagnosis allows us to direct our allocation effort towards the diversification of the portfolio investment.
 
-## 8. Conclusions
+
+## 8. Action Plan
+
+* Create an App for customers to customize portfolio investment allocation: clients can project if the portfolio they imagine shows signs of return or not
+* Use the Monte Claro Simulation with the Top 5 main portfolios as a reference
+* Create a clustering of the portfolios resulting from the simulation to identify investment profiles that can serve as input in a marketing strategy aimed at gaining market share.
 
 
 ## 9. Lessons Learned
-
+* Intense Data wrangling
+* Frequent use of made-up functions to avoid notebook pollution
+* Financial data knowledge
+* Monte Carlo Simulation dn Efficient Frontier application
 
 ## 10. To Improve
 * Gather more data and features to reduce overfitting
-* Im
+* Improve Efficient Frontier visualization
+* Add functions' documentation
 
 ## About the author
 
