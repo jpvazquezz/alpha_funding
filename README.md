@@ -23,14 +23,23 @@ To achieve that, I was responsible to elaborate hypothesis and validate them thr
 The solution was based upon the following strategy:
 
 **Step 1 - Data Description**: use descriptive statistics to identify important or ususual behaviours in the data.
+
 **Step 2 - Feature Filtering**: filter the unnecessary variables and row in terms of information gain of that are outside the business' scope.
+
 **Step 3 - Feature Engeering**: create or derive new variables to help better understand the phenomenon or to improve model performance.
+
 **Step 4 - Exploratory Data Analysis**: explore the data to find insights, to comprehend the variables' behaviour and their consequent impact on the model's learning. 
+
 **Step 5 - Data Preparation**: use techniques to better prepare the data to the machine learning model. 
+
 **Step 6 - Feature Selection**: select the features that contain the main information and attributes requeried from the model to learn the the phenomenon's behaviour. 
+
 **Step 7 - Machine Learning Modelling**: machine learning model training and performance comparasion. 
+
 **Step 8 - Hyperparameter Fine-Tuning**: figure out the best hyperparameters to tune the model's performance
+
 **Step 9 - Bussiness Report and Financial Impact**: find out what is the financial impact if the model is implemented to avoid customer churn.
+
 **Step 10 - Deploy**: deploy the model in production. 
 
 ## 4. Top 3 Data Insights:
