@@ -90,7 +90,7 @@ And what if the client pretends to invest 1.000.000,00 in the otimized portfolio
 | best_scenario | 1.601.689,85  |
 | worst_scenario| 1.116.539,85  |
 
-Therefore, in a case where the client intends to invest 1,000,000 reais, using the profitability prediction models of each asset, together with the optimization of the Monte Carlo Simulation portfolio portfolio, the client can expect to have a balance expected amount of BRL 1,359,114.8, so that the worst case scenario is that it has a balance of BRL 1,116,539.8 while the best case scenario is a balance of BRL 1,601,689.8.
+Therefore, in a case where the client intends to invest 1,000,000 reais, using the rentability prediction of each asset's model, together with the optimization of the Monte Carlo Simulation portfolio, the client can expect to have a balance amount of 1,359,114.8, so that the worst case scenario is where the  balance is 1,116,539.8 while the best case scenario is a balance of BRL 1,601,689.8.
 
 ## 8. Action Plan
 
